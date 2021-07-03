@@ -29,4 +29,12 @@ public class LoginTest extends TestBase {
         String actualMessage = loginPage.getWelcomeText();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
+
+    @Test
+    public void verifyUserShouldNavigateToLoginPage1() {
+        homePage.clickOnLoginLink();
+        String expectedMessage = "Welcome, Please Sign In!";
+        String actualMessage = loginPage.getWelcomeText();
+        Assert.assertEquals(actualMessage, expectedMessage);
+    }
 }
